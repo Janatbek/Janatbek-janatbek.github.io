@@ -16,6 +16,7 @@ export class HomeComponent {
       { name: 'keywords', content: 'Angular in github page, Angular 15, Bootstrap, Software Engineer' },
     ]);
     this.banner = new Banner('ca-pub-4402260762998050', 8896926206, 'auto', true);
+    this.setTitle();
   }
 
   setTitle(): void {
