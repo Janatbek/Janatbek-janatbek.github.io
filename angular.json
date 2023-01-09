@@ -27,7 +27,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "google44d6d40648f35446.html",
+                "input": "src/google/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -39,7 +44,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "700kb",
                   "maximumError": "1mb"
                 },
                 {
@@ -90,7 +95,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "google44d6d40648f35446.html",
+                "input": "src/google/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
