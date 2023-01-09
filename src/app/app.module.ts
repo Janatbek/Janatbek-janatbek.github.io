@@ -12,6 +12,8 @@ import { NewsComponent } from './components/news/news.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { ProjectDetailComponent } from './components/projects/project-detail/pro
     BannerComponent,
     ProjectsComponent,
     ProjectDetailComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
