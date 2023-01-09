@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      <a
+        href="#"
+        *ngFor="let project of projects"
+        class="list-group-item list-group-item-action"
+        (click)="loadProjectDetails(project.id)"
+        >{{ project.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-md-9"></div>
+</div>

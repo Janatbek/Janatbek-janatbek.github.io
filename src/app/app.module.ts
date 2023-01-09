@@ -10,6 +10,8 @@ import { UserComponent } from './components/user/user.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { NewsComponent } from './components/news/news.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,12 @@ import { BannerComponent } from './components/banner/banner.component';
     UserComponent,
     FeedComponent,
     NewsComponent,
-    BannerComponent
+    BannerComponent,
+    ProjectsComponent,
+    ProjectDetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

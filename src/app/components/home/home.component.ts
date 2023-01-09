@@ -11,7 +11,7 @@ export class HomeComponent {
   banner: Banner;
   constructor(private meta: Meta, private title: Title) {
     this.meta.addTags([
-      { name: 'description', content: 'Home page of Janatbek Orozaly portfolio app' },
+      { name: 'description' , content: 'Home page of Janatbek Orozaly portfolio app' },
       { name: 'author', content: 'Janatbek @ TechDevApps' },
       { name: 'keywords', content: 'Angular in github page, Angular 15, Bootstrap, Software Engineer' },
     ]);
