@@ -29,7 +29,7 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "google44d6d40648f35446.html",
+                "glob": "**.*",
                 "input": "src/google/",
                 "output": "/"
               }
