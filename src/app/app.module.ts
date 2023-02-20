@@ -1,35 +1,48 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
+import { FuseModule } from '@fuse';
+import { FuseConfigModule } from '@fuse/services/config';
+import { FuseMockApiModule } from '@fuse/lib/mock-api';
+import { CoreModule } from 'app/core/core.module';
+import { appConfig } from 'app/core/config/app.config';
+import { mockApiServices } from 'app/mock-api';
+import { LayoutModule } from 'app/layout/layout.module';
+import { AppComponent } from 'app/app.component';
+import { appRoutes } from 'app/app.routing';
+import { BannerComponent } from './banner/banner.component';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { UserComponent } from './components/user/user.component';
-import { FeedComponent } from './components/feed/feed.component';
-import { NewsComponent } from './components/news/news.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './components/footer/footer.component';
+const routerConfig: ExtraOptions = {
+    preloadingStrategy       : PreloadAllModules,
+    scrollPositionRestoration: 'enabled'
+};
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    UserComponent,
-    FeedComponent,
-    NewsComponent,
-    BannerComponent,
-    ProjectsComponent,
-    ProjectDetailComponent,
-    FooterComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        BannerComponent
+    ],
+    imports     : [
+        BrowserModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(appRoutes, routerConfig),
+
+        // Fuse, FuseConfig & FuseMockAPI
+        FuseModule,
+        FuseConfigModule.forRoot(appConfig),
+        FuseMockApiModule.forRoot(mockApiServices),
+
+        // Core module of your application
+        CoreModule,
+
+        // Layout module of your application
+        LayoutModule
+    ],
+    bootstrap   : [
+        AppComponent
+    ]
 })
-export class AppModule {}
+export class AppModule
+{
+}
